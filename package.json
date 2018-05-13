@@ -1,0 +1,29 @@
+{
+  "name": "mms-node",
+  "version": "1.0.0",
+  "description": "Find fun content with out NodeJS library",
+  "keywords": [
+    "mymemestore",
+    "content",
+    "search"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyMemeStore/mms-node.git"
+  },
+  "author": "My Meme Store",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MyMemeStore/mms-node/issues"
+  },
+  "homepage": "https://github.com/MyMemeStore/mms-node#readme",
+  "dependencies": {
+    "@types/node": "^10.0.8",
+    "@types/node-fetch": "^1.6.9",
+    "node-fetch": "^2.1.2"
+  }
+}
