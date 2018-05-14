@@ -46,7 +46,7 @@ export class MMS {
      * @param safesearch 
      */
     SearchAny(query: string, limit?: number, safesearch?: SafeSearch): Promise<Content[]> {
-        return fetch(`${baseurl}/${this.apikey}/${version}/posts/any?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
+        return fetch(`${baseurl}/${this.apikey}/${version}/content/any?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
             .then(result => result.json())
             .then(json => ConvertResults(json));
     }
@@ -58,7 +58,7 @@ export class MMS {
      * @param safesearch 
      */
     SearchImages(query: string, limit?: number, safesearch?: SafeSearch): Promise<Content[]> {
-        return fetch(`${baseurl}/${this.apikey}/${version}/posts/image?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
+        return fetch(`${baseurl}/${this.apikey}/${version}/content/image?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
             .then(result => result.json())
             .then(json => ConvertResults(json));
     }
@@ -70,7 +70,7 @@ export class MMS {
      * @param safesearch 
      */
     SearchGifs(query: string, limit?: number, safesearch?: SafeSearch): Promise<Content[]> {
-        return fetch(`${baseurl}/${this.apikey}/${version}/posts/gif?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
+        return fetch(`${baseurl}/${this.apikey}/${version}/content/gif?query=${query}${limit ? `&limit=${limit}` : ''}${safesearch ? `&safesearch=${safesearch}` : ''}`)
             .then(result => result.json())
             .then(json => ConvertResults(json));
     }
@@ -80,7 +80,7 @@ export class MMS {
      * @param id 
      */
     GetSpecific(id: string) {
-        return fetch(`${baseurl}/${this.apikey}/${version}/posts/${id}`)
+        return fetch(`${baseurl}/${this.apikey}/${version}/content/${id}`)
             .then(result => result.json())
             .then(json => ConvertResults(json));
     }
